@@ -1,0 +1,309 @@
+section {
+  font-family: open_sansregular;
+}
+
+.bold {
+  color: #565658;
+  font-weight: bold;
+}
+
+.card {
+  position: relative;
+}
+
+.text--primary {
+  color: #69c2c6;
+}
+
+section + section {
+  margin-top: -24px;
+}
+
+h2,
+.card h3 {
+  text-transform: uppercase;
+}
+
+.hero, .involved, .about, .event {
+  text-align: center;
+}
+
+.news {
+  text-align: left;
+}
+
+.event, .about {
+  background-color: #f2f2f5;
+}
+
+.event {
+  .content-wrap {
+    padding: 20px 0;    
+    font-size: 1.5rem;
+    
+    p:nth-child(2) {
+      color: #8c91a1;
+      font-size: 1.2rem;
+    }
+  }
+
+  .button {
+    background: #00c1be;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+}
+
+.involved, .about, .news {  
+  h2 {
+    padding-top: 3.5rem;
+    font-size: 2.5rem;    
+  }
+  
+}
+
+.involved {
+  .card-img {    
+    margin: 20px auto;
+    width: 180px;
+    height: 180px;    
+  }
+  
+  .card-content {    
+    
+    h3 { 
+      font-size: 1.5rem;
+      color: #5a6175;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: #5a6175;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.about {  
+  h2 {
+    padding-bottom: 2.5rem;
+  }
+  
+  p {
+    font-size: 1.4rem;
+    
+    &.bold {
+      padding-top: 20px;
+    }
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+
+    
+    .dot {
+      background-color: #979eb1;
+      border-radius: 50%;
+      height: 15px;
+      width: 15px;
+    }
+    
+    .dot--active {
+      background-color: #69c2c6;;
+    }
+
+    .dot + .dot {
+      margin-left: 15px;
+    }
+  }
+  
+  .missions {
+    padding-top: 130px;    
+
+    li {
+      margin-bottom: 5rem;
+    }
+
+    .card {
+      &::after {
+        content: '';
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        z-index: 3;
+      }
+  
+      h3 {
+        padding-top: 30px;
+      }
+    }
+
+  }
+}
+
+.news {
+  .content-wrap {
+    text-align: center;
+  }
+    
+  hr {
+    margin: 1rem 0;
+    border-top: 2px solid #f2f2f5;
+  }
+
+  .card-content {
+    p {
+      line-height: 2rem;
+      font-size: 1.3rem;
+      padding-left: 10px;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.hero {
+  color: white;  
+  min-height: 690px;
+  
+  .content-wrap {
+    padding-top: 110px;
+  } 
+
+  .bg-image {
+    position: absolute;
+    background: #333
+      url("../images-source/hero.jpg");
+    background-position: 0px -10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 690px;
+    z-index: -1;
+  }
+}
+
+.about, .involved, .news {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #333;
+  }
+  
+  .card-content {
+    padding: 1.5em;
+  }
+}
+
+.partners {
+  li {
+    background: none;
+  }
+}
+
+@media (min-width: 700px) {
+  
+  .involved, .about, .event, .news {
+    padding: 0 135px;
+  }
+
+  .about, .news, .partners {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .involved {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .about, .involved {
+    li {
+      width: 31%;
+    }
+  }
+
+  .missions {
+    padding-bottom: 60px;
+  }
+  
+  .partners {    
+    li {
+      width: 19%;
+      
+      img {
+        height: 80%;
+        width: 50%;
+      }
+    }
+  }
+
+  .news {
+    li {
+      width: 24%;
+    }
+  
+    .card-content {
+      padding: 0;
+    }
+  }
+
+  .hero {
+    p {
+      font-size: 1.5rem;    
+      padding: 0 30rem;
+      line-height: 3.0rem;    
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 5.3rem;
+      font-family: open_sanslight;
+      margin-bottom: 4rem;
+    }  
+  
+    p:nth-child(odd) {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+    }
+  }
+
+}

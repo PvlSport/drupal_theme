@@ -1,0 +1,73 @@
+.header {
+  display: flex;  
+  flex-direction: column;
+  min-height: 120px;
+  text-align: center;
+
+  .header__left {   
+    padding-top: 10px;
+  }
+  
+  .header__logo-image {
+    height: 35px;
+    width: 235px;
+  }
+  
+  .header__right {
+    a {
+      color: #5a6175;
+      text-decoration: none;
+      text-transform: uppercase;
+    }   
+  }  
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding-top: 10px;
+      font-size: 1.4rem;
+      font-family: museo_sans500;
+    }
+  }
+
+  .button {
+    margin: 1rem 0px;
+  }
+
+  @media (min-width: 700px) {
+    padding: 0 135px;    
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    .header__left {
+      margin-right: auto;
+    }
+
+    .header__right {
+      padding-right: 30px;
+    }
+
+    .button {
+      margin: 0px 5px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      li + li {
+        margin-left: 25px;
+      }
+
+      li:hover {
+        border-top: #00c1be 3px solid;
+      }
+    }
+  }
+}
+
